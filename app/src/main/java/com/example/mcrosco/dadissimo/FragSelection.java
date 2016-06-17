@@ -66,7 +66,6 @@ public class FragSelection extends Fragment implements View.OnClickListener, Com
         textTotale =(TextView)view.findViewById(R.id.totale);
 
 
-
     }
 
     private void initListeners() {
