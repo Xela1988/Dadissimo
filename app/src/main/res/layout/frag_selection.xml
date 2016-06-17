@@ -124,7 +124,8 @@
                 android:id="@+id/d4"
                 android:textSize="25dp"
                 android:text="D4"
-                android:layout_alignBottom="@+id/editD4" />
+                android:layout_alignBottom="@+id/editD4"
+                android:checked="false" />
 
             <EditText
                 android:layout_width="wrap_content"
