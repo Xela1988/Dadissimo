@@ -1,19 +1,18 @@
 package com.example.mcrosco.dadissimo;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorEventListener2;
 import android.hardware.SensorManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
 
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
@@ -58,35 +57,30 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             acceleration= x*x+y*y+z*z;
             float diff = acceleration-lastAcc;
             totAcc= diff*acceleration;
-            if (totAcc>15000){
+            if (totAcc>25000){
                 onEvent=true;
-                AlertDialog.Builder builder=new AlertDialog.Builder(this);
-                builder.setMessage("Reset?");
-                builder.setPositiveButton("Si", new DialogInterface.OnClickListener()
+
+                FragSelection ciccio = (FragSelection) getSupportFragmentManager().findFragmentByTag("fragselect");
+                ciccio.clickThrow();
 
                 {
-                    @Override
-                    public void onClick(DialogInterface sensor, int accuracy) {
 
-                        onVisibleBehindCanceled();
+        FragSelection fragSelection= new FragSelection();
+
+
+
+
+
+                    }
+
                         onEvent=false;
 
                     }
-                });
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface sensor, int accuracy) {
 
-                        onEvent=false;
-
-                    }
-                });
-
-                builder.show();
             }
 
         }
-    }
+
 
 
 
@@ -105,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         //gli carico il fragment di selezione
         FragSelection fragSelection = new FragSelection();
-        getSupportFragmentManager().beginTransaction().add(R.id.layout_main, fragSelection).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.layout_main, fragSelection,"fragselect").addToBackStack(null).commit();
 
 
 /*

@@ -227,4 +227,20 @@ public class FragSelection extends Fragment implements View.OnClickListener, Com
             listaDadi.add(new Dado(faces));
         }
     }
+
+    public void clickThrow(){
+        buttonThrow.performClick();
+    }
+
+    public void shakedice() {
+        createAndAdd(controllaDadi(edit4), 4);
+        createAndAdd(controllaDadi(edit6), 6);
+        createAndAdd(controllaDadi(edit8), 8);
+        createAndAdd(controllaDadi(edit10), 10);
+        createAndAdd(controllaDadi(edit12), 12);
+        createAndAdd(controllaDadi(edit20), 20);
+        createAndAdd(controllaDadi(edit100), 100);
+
+    }
+
 }
