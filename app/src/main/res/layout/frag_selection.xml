@@ -24,10 +24,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24dp"
-                    android:text="Selected dices:"
+                    android:textSize="20dp"
+                    android:text="Result Dices"
                     android:textColor="#222222"
                     android:id="@+id/textView2"
+                    android:layout_marginTop="10dp"
                     />
 
 
@@ -37,9 +38,9 @@
                     android:id="@+id/text4"
                     android:text="D4:"
                     android:textSize="22dp"
+                    android:layout_marginTop="10dp"
                     android:textColor="#222222"
-                    android:layout_below="@id/textView2"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_below="@id/textView2"/>
 
 
 
@@ -51,7 +52,7 @@
                     android:text="D6:"
                     android:textSize="22dp"
                     android:textColor="#222222"
-                    android:layout_marginTop="13dp"/>
+                    android:layout_marginTop="15dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -80,7 +81,7 @@
                     android:layout_below="@id/text10"
                     android:text="D12:"
                     android:textSize="22dp"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginTop="14dp"
                     android:textColor="#222222"/>
 
                 <TextView
@@ -91,7 +92,7 @@
                     android:text="D20:"
                     android:textSize="22dp"
                     android:textColor="#222222"
-                    android:layout_marginTop="13dp"/>
+                    android:layout_marginTop="18dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,7 +102,7 @@
                     android:text="D100:"
                     android:textSize="22dp"
                     android:textColor="#222222"
-                    android:layout_marginTop="13dp"/>
+                    android:layout_marginTop="17dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,15 +137,24 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:layout_below="@+id/sopra">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choice Dices"
+                        android:id="@+id/sceltadadi"
+                        android:layout_marginTop="10dp"
+                        android:textSize="22dp"
+                        android:textColor="#222222"/>
+
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/d4"
-                        android:textSize="25dp"
+                        android:textSize="20dp"
                         android:text="D4"
-                        android:layout_alignBottom="@+id/editD4"
-
-
+                        android:layout_marginTop="6dp"
+                        android:layout_below="@+id/sceltadadi"
                         />
 
                     <EditText
@@ -153,6 +163,7 @@
                         android:layout_toRightOf="@id/d4"
                         android:maxLines="1"
                         android:hint="n°"
+                        android:layout_alignBottom="@+id/d4"
                         android:layout_marginLeft="10dp"
                         android:id="@+id/editD4"/>
 
@@ -161,9 +172,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/d6"
                         android:text="D6"
-                        android:textSize="25dp"
-                        android:layout_alignBottom="@+id/editD6"
-                        android:checked="false" />
+                        android:textSize="20dp"
+                        android:layout_below="@+id/d4"
+                        android:layout_marginTop="8dp"
+                        />
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -171,17 +183,20 @@
                         android:id="@+id/editD6"
                         android:maxLines="1"
                         android:hint="n°"
+                        android:layout_below="@+id/editD4"
+                        android:layout_toRightOf="@+id/d6"
                         android:layout_marginLeft="10dp"
-                        android:layout_toRightOf="@id/d6"
-                        android:layout_below="@+id/editD4" />
+                        android:layout_alignBottom="@+id/d6"
+                        />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/d8"
+                        android:layout_below="@+id/d6"
+                        android:layout_marginTop="8dp"
                         android:text="D8"
-                        android:textSize="25dp"
-                        android:layout_alignBottom="@+id/editD8" />
+                        android:textSize="20dp" />
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -191,15 +206,17 @@
                         android:hint="n°"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@id/d6"
-                        android:layout_below="@+id/editD6" />
+                        android:layout_below="@+id/editD6"
+                        />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/d10"
+                        android:layout_below="@+id/d8"
                         android:text="D10"
-                        android:textSize="25dp"
-                        android:layout_alignBottom="@+id/editD10" />
+                        android:textSize="20dp"
+                        android:layout_marginTop="8dp"/>
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -208,6 +225,7 @@
                         android:maxLines="1"
                         android:hint="n°"
                         android:layout_marginLeft="10dp"
+                        android:layout_alignBottom="@+id/d10"
                         android:layout_toRightOf="@id/d10"
                         android:layout_below="@+id/editD8" />
 
@@ -215,9 +233,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/d12"
+                        android:layout_below="@+id/d10"
                         android:text="D12"
-                        android:textSize="25dp"
-                        android:layout_alignBottom="@+id/editD12" />
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp"/>
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -234,10 +253,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/d20"
                         android:text="D20"
-                        android:textSize="25dp"
-                        android:layout_alignBottom="@+id/editD20"
-
-                        />
+                        android:textSize="20dp"
+                        android:layout_below="@+id/d12"
+                        android:layout_marginTop="10dp"
+                         />
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -245,6 +264,7 @@
                         android:id="@+id/editD20"
                         android:maxLines="1"
                         android:hint="n°"
+                        android:layout_alignBottom="@+id/d20"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@id/d20"
                         android:layout_below="@+id/editD12" />
@@ -254,8 +274,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/d100"
                         android:text="D100"
-                        android:textSize="25dp"
-                        android:layout_alignBottom="@+id/editD100" />
+                        android:textSize="20dp"
+                        android:layout_below="@+id/d20"
+                        android:layout_marginTop="8dp"
+                         />
 
                     <EditText
                         android:layout_width="wrap_content"
@@ -263,6 +285,7 @@
                         android:id="@+id/editD100"
                         android:maxLines="1"
                         android:hint="n°"
+                        android:layout_alignBottom="@+id/d100"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@id/d100"
                         android:layout_below="@+id/editD20" />
@@ -274,13 +297,6 @@
                 </RelativeLayout>
 
             </ScrollView>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:id="@+id/sopra">
-            </RelativeLayout>
 
         </LinearLayout>
 
